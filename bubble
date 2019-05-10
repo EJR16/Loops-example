@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+{
+	int arr[30], i, j,n, temp;
+	cout << "Enter the number of Elements to be sorted: " << flush;
+	cin >> n;
+	
+	for (i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+		cout << arr[i] << ",";
+	}
+	cout << endl << endl;
+
+	for(i = 0; i < n; i++)
+	{
+		for (j = 0; j < n - i; j++)
+		{
+			if(arr[j] > arr[j+1])
+			{
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+			}
+		}
+	}
+	cout << "The array elements after sorting 2is: ";
+	for(i = 0; i < n; i++)
+	{
+		cout << arr[i] <<" , ";
+	}
+
+_getch();
+return 0;
+}
